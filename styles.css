@@ -1,0 +1,20 @@
+html{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 400px;
+    margin-right: 400px;
+    background-color: #24292e;
+    color: white;
+}
+
+a{
+    color: lightskyblue;
+}
+
+.logo{
+    width: 2.5%;
+}
+
+.promo-art{
+    width: 50%;
+}

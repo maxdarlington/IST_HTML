@@ -7,40 +7,168 @@
         <div class="header">
             <h1 class="pagename"><img class="logo" src="images/placeholder.png" alt="GitHow Logo">GitHow</h1>
             <nav>
-                <h1 class="headerlink"><a href="#intro">Introduction</a></h1>
-                <h1 class="headerlink"><a href="#set-up">Set-Up</a></h1>
-                <h1 class="headerlink"><a href="#conclusion">Conclusion</a></h1>
+                <h1><a class="headerlink" href="#intro">Introduction</a></h1>
+                <h1><a class="headerlink" href="#set-up">Set-Up</a></h1>
+                <h1><a class="headerlink" href="#conclusion">Conclusion</a></h1>
             </nav>
         </div>
-        <div class="title">
-            <h1>How To Use GitHub Through Unix Shell</h1>
-            <p>GitHub is used by programmers all over the world to share their files, learn how to speed up your workflow by using the Unix Shell terminal to share and clone repositories from GitHub!</p>
-            <img class="promo-art" src="images/gitterminal.png" alt="GitHub Promotional Art of Terminal">
-        </div>
-        <div class="introduction">
-            <h1 id="intro">Introduction</h1>
-            <h2>Prerequisites</h2>
-            <ul class="prereq-list">
-                <li>A <a href="https://github.com/">GitHub</a> Account</li>
-                <li>Linux installed onto your computer (or any other OS with <a href="https://en.wikipedia.org/wiki/Unix_shell">Unix Shell</a>)</li>
-                <li>Basic knowledge of how to use Unix Shell</li>
-            </ul>
-            <p>Being able to efficiently use GitHub from the terminal is a useful skill for all programmers as it allows for a more efficient workflow. Additonally, using GitHub's CLI (Command-Line Interface) allows for deeper control over how you use your machine and shows competance in the workplace.</p>
-            <h2>In this guide you will learn the following:</h2>
-            <ul class="learnlist">
-                <li>How to install Git using Unix Shell</li>
-                <li>How to set-up Git using Unix Shell</li>
-                <li>How to use Unix Shell to access repositories</li>
-            </ul>
-        </div>
-        <div class="set-up">
-            <h1 id="set-up">Set-Up</h1>
-            <nav>
-                <h2> Table of Contents</h2>
-                <h3 class="setup-link"><a href="#step1">Step 1: Installation</a></h3>
-                <h3 class="setup-link"><a href="#step2">Step 2: Set-Up</a></h3>
-                <h3 class="setup-link"><a href="#step3">Step 3: Accessing Repositories</a></h3>
-            </nav>
+        <div class="content">
+            <div class="title">
+                <h1>How To Use GitHub CLI Through Unix Shell</h1>
+                <p>GitHub is used by programmers all over the world to share their files, learn how to speed up your workflow by using the Unix Shell terminal to share and clone repositories from GitHub!</p>
+                <img class="promo-art" src="images/gitterminal.png" alt="GitHub Promotional Art of Terminal">
+            </div>
+            <div class="introduction">
+                <h1 id="intro">Introduction</h1>
+                <p>Being able to efficiently use GitHub from the terminal is a useful skill for all programmers as it allows for a more efficient workflow. Additonally, using GitHub's CLI (Command-Line Interface) allows for deeper control over how you use your machine and shows competance in the workplace.</p>
+                <h2>Prerequisites</h2>
+                <ul class="prereq-list">
+                    <li>A <a href="https://github.com/">GitHub</a> Account</li>
+                    <li>Linux installed onto your computer (or any other OS with <a href="https://en.wikipedia.org/wiki/Unix_shell">Unix Shell</a>)</li>
+                    <li>Basic knowledge of how to use Unix Shell</li>
+                </ul>
+                <h2>In this guide you will learn the following:</h2>
+                <ul class="learnlist">
+                    <li>How to install Git using Unix Shell</li>
+                    <li>How to set-up Git using Unix Shell</li>
+                    <li>How to use Unix Shell to access repositories</li>
+                </ul>
+            </div>
+            <div class="set-up">
+                <h1 id="set-up">Set-Up</h1>
+                <nav>
+                    <h2> Table of Contents</h2>
+                    <h3 class="setup-link"><a href="#step1">Step 1: Installation</a></h3>
+                    <h3 class="setup-link"><a href="#step2">Step 2: Configuring Git</a></h3>
+                    <h3 class="setup-link"><a href="#step3">Step 3: Accessing Repositories</a></h3>
+                </nav>
+            <div>
+                <h2 id="step1">Step 1: Installation</h2>
+                <p>A straightforward process, just enter the following into your terminal.</p>
+                <h3>Step 1.1: Update Unix Shell</h3>
+                <p>Run the following commands in your terminal to make sure your Unix Shell is up-to-date</p>
+                <div class="code">
+                <ol>
+                    <li><code>sudo apt update</code></li>
+                        <li><code>sudo apt upgrade</code></li>
+                </ol>
+                </div>
+                <h3>Step 1.2: Install Git</h3>
+                <p>Run the following commands in your terminal in order to download and install Git.</p>
+                <div class="code">
+                <ol>
+                    <li><code>sudo add-apt-repository ppa:git-core/ppa</code></li>
+                    <li><code>sudo apt update</code></li>
+                    <li><code>sudo apt install git</code></li>
+                </ol>
+                </div>
+                <h3>Step 1.3: Check Git Version</h3>
+                <p>It is important to make sure that you have the latest version of Git installed in order to avoid missing features or bugs.</p>
+                <div class="code">
+                    <ol>
+                        <li><code>git --version</code></li>
+                    </ol>
+                </div>
+                <p>You should now have the latest versions of both Unix Shell and Git installed and now can proceed with the next step.</p>
+            </div>
+            <div>
+                <h2 id="step2">Step 2: Configuring Git</h2>
+                <p>In order to use GitHub through the terminal, we will have to link our local installation of Git with GitHub.</p>
+                <h3>Step 2.1: Logging into your account</h3>
+                <p>Run the following commands to log into your GitHub account. Make sure to keep the quotation marks whilst replacing the example text with your details.</p>
+                <div class="code">
+                    <ol>
+                        <li><code>git config --global user.name "Insert Your Name"</code></li>
+                        <li><code>git config --global user.email "insertemail@example.com"</code></li>
+                    </ol>
+                    </div>
+                    <h3>Step 2.2: Verifying</h3>
+                    <p>Run the following commands to double-check that your are now logged into your GitHub account.</p>
+                    <div class="code">
+                        <ol>
+                            <li><code>git config --get user.name</code></li>
+                            <li><code>git config --get user.email</code></li>
+                        </ol>
+                    </div>
+                    <p>You should get a response like this.</p>
+                    <div class="code">
+                        <ol>
+                            <li><code>yourname</code></li>
+                            <li><code>youremail@example.com</code></li>
+                        </ol>
+                    </div>
+                    <h3>Step 2.3: SSH Key</h3>
+                    <p>Run the following commands to create an SSH Key. Make sure to fill in the brackets with your details (Do not include the brackets).</p>
+                    <div class="code">
+                        <ol>
+                            <li><code>ssh-keygen -t ed25519 -C (your email address)</code></li>
+                        </ol>
+                    </div>
+                        <ul>
+                            <li>When the terminal asks you for a location to save the key. You can enter a file location or just press <span class="keyinput">ENTER</span> to use the default.</li>
+                            <li>When the terminal asks you to enter a password, you can either leave it blank or enter a password of your choice.</li>
+                        </ul>
+                    <h3>Step 2.4: Linking SSH Key with GitHub</h3>
+                    <p></p>
+                    <div class="code">
+                        <ol>
+                            <li><code>cat ~/.ssh/id_ed25519.pub</code></li>
+                        </ol>
+                    </div>
+                    <p>Highlight the output and copy the text, It should start with ssh-ed25519 and end with your email address.</p>
+                    <p>Next, go back to the GitHub website and go to your account settings, then go into the SSH and GGP Key section, then press on the create a new SSH key button, then copy and paste the text you just copied, remember to give the key a title which you will be able to differentiate from other keys in the future. </p>
+                    <h3>Step 2.5: Testing Your SSH Key</h3>
+                    <p>Enter the following command in your terminal.</p>
+                    <div class="code">
+                        <ol>
+                            <li><code>ssh -T git@github.com</code></li>
+                        </ol>
+                    </div>
+                    <p>If your SSH Key has been set-up properly, you should see the following output.</p>
+                    <div class="code">
+                        <ol>
+                            <li><code>Hi USERNAME! You've successfully authenticated, but GitHub does not provide shell access.</code></li>
+                        </ol>
+                    </div>
+                    <p>Instead, you may see a warning such as the following:</p>
+                    <div class="code">
+                        <ol>
+                            <li><code>The authenticity of host 'github.com (IP ADDRESS)' can't be established.</code></li>
+                            <li><code>ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.</code></li>
+                            <li><code>Are you sure you want to continue connecting (yes/no)?</code></li>
+                        </ol>
+                    </div>
+                    <p>Just type yes and you should recieve the output mentioned previously.</p>
+                    </div>
+                    <div>
+                        <h2 id="step3">Step 3: Accessing Repositories</h2>
+                        <p>To get you started with using the GitHub CLI, here are some simple commands to use to access repositories.</p>
+                        <h3>Step 3.1: Making a local repository folder</h3>
+                        <p>Enter the following commands to create a new folder. You can enter any name for the folder but I reccommend "repos".</p>
+                        <div class="code">
+                            <ol>
+                                <li><code>mkdir repos</code></li>
+                            </ol>
+                        </div>
+                        <h3>Step 3.2: Creating a respository on GitHub</h3>
+                        <p>Go to the GitHub dashboard, type in a name and click on create new repository.</p>
+                        <img src="images/1.png">
+                        <p>Next, you should be greeted with a message which looks like this:</p>
+                        <img src="images/2.png">
+                        <p>Copy the SSH.</p>
+                        <h3>Step 3.3: Cloning the repository</h3>
+                        <p>Enter the following commands:</p>
+                        <div class="code">
+                            <ol>
+                                <li><code>cd repos</code></li>
+                                <li><code>git clone (paste SSH here)</code></li>
+                            </ol>
+                        </div>
+                        <p>The first command is to open the "repos" folder.</p>
+                        <p>The second command is to clone the repository in the current directory (being "repos").</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

@@ -1,14 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 html{
+    background-color: #24292e;
+    color: white;
+    font-family: Raleway;
+}
+
+
+
+.content{
     margin-top: 100px;
     margin-bottom: 100px;
     margin-left: 400px;
     margin-right: 400px;
-    background-color: #24292e;
-    color: white;
-}
-
-a{
-    color: lightskyblue;
 }
 
 .logo{
@@ -18,3 +21,44 @@ a{
 .promo-art{
     width: 50%;
 }
+
+a{
+    color: lightskyblue;
+    text-decoration: none;
+}
+
+.code{
+    background: white;
+    border: 10px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    color: black;
+}
+
+h1, h2, h3{
+    font-weight: bold;
+}
+
+
+
+.header{
+    display: inline-flex;
+    border: 0px;
+    border-style: solid;
+    border-color: white;
+    background: white;
+    color: black;
+}
+
+.headerlink{
+    color: black;
+}
+
+a:hover {
+    background: grey;
+    border: 0px;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 8px;
+  }

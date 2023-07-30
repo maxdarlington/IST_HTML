@@ -21,7 +21,7 @@ a:hover {
   }
 
 body {
-    width: 90%;
+    width: 99%;
 }
 
 .content{
@@ -68,7 +68,7 @@ h1, h2, h3{
     padding-left: 40%;
     padding-right: 20%;
     font-size: 30px;
-    width: 70%;
+    width: 40%;
     margin-left: 0%;
     border-radius: 10px;
 }
@@ -104,7 +104,7 @@ h1, h2, h3{
     padding-right: 20%;
     font-size: 20px;
     text-align: center;
-    width: 70%;
+    width: 50%;
     margin-left: 0%;
     border-radius: 10px;
   }
